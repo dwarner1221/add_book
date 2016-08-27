@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AddressBookApp</title>
+  <title>Address Book</title>
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
 
 <p class="notice"><%= notice %></p>
-
+<nav>
 <% if user_signed_in? %>
 	<ul>
 		<li><%= link_to 'Add Contact', new_contact_path %> </li>
@@ -22,6 +22,7 @@
 		<li><%= link_to 'Sign in', new_user_session_path %></li>
 	</ul>
 <% end %>
+</nav>
 
 <%= yield %>
 
